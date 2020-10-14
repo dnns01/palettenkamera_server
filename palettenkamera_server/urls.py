@@ -18,7 +18,7 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', views.homeo, name="home"),
+    path('/', views.home, name="home"),
     path('<int:no>/', views.home_no, name="home_no"),
     path('delete/<int:no>', views.delete, name="delete"),
     path('status', views.status, name="status"),
