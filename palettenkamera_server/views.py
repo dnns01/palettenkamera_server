@@ -13,7 +13,7 @@ def home(request):
 def home_no(request, no):
     with picamera.PiCamera() as camera:
         camera.resolution = (3280, 2464)
-        camera.capture("/var/www/palettenkamera_server/media/" + no + ".jpg")
+        camera.capture("/var/www/palettenkamera_server/media/" + str(no) + ".jpg")
     return render(request, 'home.html', {'bild': str(no) + '.jpg'})
 
 
